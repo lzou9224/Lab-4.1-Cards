@@ -1,9 +1,16 @@
 
-ArrayList <Card> unDealt;
-
 public class Deck {
+	
+	
+	//fields:
+	
+	private String[] rank;
+	private String[] suit;
+	private int[] pointValue;
 
-	public Deck(String[] ranks, String[] suits, int[] values)
+	
+	ArrayList<Card>
+	public Deck(String[] ranks, String[] suits, int[] pointValue)
 	{
 		for(int x=0; x< ranks.length; x++)
 		{
