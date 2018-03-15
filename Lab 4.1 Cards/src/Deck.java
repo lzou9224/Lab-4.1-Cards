@@ -5,6 +5,10 @@ public class Deck {
 	ArrayList<Card> unDealt;
 	ArrayList<Card> dealt;
 	
+	
+	this.Dealt = new ArrayList<Card>();
+	this.unDealt = new ArrayList<Card>();
+	
 	//fields:
 	private String[] ranks;
 	private String[] suits;
