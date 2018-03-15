@@ -7,7 +7,7 @@ public class Card {
 	private String suit;
 	private int pointValue;
 	
-	public Card(String ranks, String suits, int pointValue) 
+	public Card(String rank, String suit, int pointValue) 
 	{		
 		this.rank = rank;
 		this.suit = suit;
@@ -32,6 +32,10 @@ public class Card {
 	}
 	
 	
-	public String toString();
+	@Override
+	public String toString()
+	{
+		return "Rank: " + this.rank + "\t Suits: " + this.suit;
+	}
 
 }
