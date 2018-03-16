@@ -2,25 +2,25 @@ import java.util.ArrayList;
 
 public class Deck {
 	
+	
 	ArrayList<Card> unDealt;
-	ArrayList<Card> dealt;
-	
-	
+
 	this.Dealt = new ArrayList<Card>();
 	this.unDealt = new ArrayList<Card>();
 	
 	//fields:
-	private String[] ranks;
-	private String[] suits;
-	private int[] pointValues;
+	private String[] rank;
+	private String[] suit;
+	private int[] pointValue;
 
-	public Deck(String[] ranks, String[] suits, int[] pointValues)
+
+	public Deck(String[] rank, String[] suit, int[] pointValue)
 	{
-		for(int x=0; x< ranks.length; x++)
+		for(int x=0; x< rank.length; x++)
 		{
-			for(int y=0; y< suits.length; y++)
+			for(int y=0; y< suit.length; y++)
 			{
-				unDealt.add(new Card(ranks[x], suits[y], pointValues[x]));
+				unDealt.add(new Card(rank[x], suit[y], pointValue[x]));
 			}
 		}
 	}
@@ -28,32 +28,32 @@ public class Deck {
 	//getters and setters
 	public String[] getRanks() 
 	{
-		return ranks;
+		return rank;
 	}
 	
 	public void setRanks(String[] ranks) 
 	{
-		this.ranks = ranks;
+		this.rank = ranks;
 	}
 	
 	public String[] getSuits() 
 	{
-		return suits;
+		return suit;
 	}
 	
 	public void setSuits(String[] suits) 
 	{
-		this.suits = suits;
+		this.suit = suits;
 	}
 	
 	public int[] getPointValues() 
 	{
-		return pointValues;
+		return pointValue;
 	}
 	
 	public void setPointValues(int[] pointValues) 
 	{
-		this.pointValues = pointValues;
+		this.pointValue = pointValues;
 	}
 	
 	//---------------------------------------------
@@ -77,7 +77,7 @@ public class Deck {
 		return unDealt.size();
 	}
 	
-	public int deal()
+	public Card deal()
 	{
 		if(unDealt.size()==0)
 		{
@@ -86,13 +86,15 @@ public class Deck {
 		
 		else
 		{
-			return unDealt.remove(random);
+			return unDealt.remove(0);
 		}
 	}
 	
-	public shuffle()
+	public void shuffle()
 	{
-		Math.random
+		Card temp = unDealt.get(0);
+		unDealt.set(0, temp);
+		
 	}
 	
 
