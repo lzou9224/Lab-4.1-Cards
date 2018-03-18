@@ -95,9 +95,8 @@ public class Deck {
 	public void shuffle()
 	{
 
-		for(int x=0; x<unDealt.size();x++)
+		for(int x=0; x< unDealt.size(); x++)
 		{		
-			
 			int random = (int) Math.random()*x;
 
 			Card temp = unDealt.get(0);	
