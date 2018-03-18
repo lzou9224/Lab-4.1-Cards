@@ -3,11 +3,10 @@ import java.util.ArrayList;
 public class Deck {
 	
 	
-	ArrayList<Card> unDealt;
+	private ArrayList<Card> unDealt = new ArrayList<Card> ();
+	private ArrayList<Card> Dealt = new ArrayList<Card>();
 
-	this.Dealt = new ArrayList<Card>();
-	this.unDealt = new ArrayList<Card>();
-	
+
 	//fields:
 	private String[] rank;
 	private String[] suit;
@@ -86,17 +85,26 @@ public class Deck {
 		
 		else
 		{
-			return unDealt.remove(0);
+			Card firstNum = unDealt.remove(0);
+			Dealt.add(firstNum);
+			return firstNum;
+			
 		}
 	}
 	
 	public void shuffle()
 	{
-		Card temp = unDealt.get(0);
-		unDealt.set(0, temp);
+
+		for(int x=0; x<unDealt.size();x++)
+		{		
+			
+			int random = (int) Math.random()*x;
+
+			Card temp = unDealt.get(0);	
+			unDealt.set(random, temp);
 		
+		}
 	}
-	
 
 }
 

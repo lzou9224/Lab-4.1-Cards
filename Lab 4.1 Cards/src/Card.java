@@ -16,12 +16,22 @@ public class Card {
 		
 	}
 	
+	public int getPointValue() 
+	{
+		return pointValue;
+	}
+
+	public void setPointValue(int pointValue) 
+	{
+		this.pointValue = pointValue;
+	}
+
 	public String getRank()
 	{
 		return rank;
 	}
 	
-	public String getSuits()
+	public String getSuit()
 	{
 		return suit;
 	}
@@ -35,7 +45,7 @@ public class Card {
 	@Override
 	public String toString()
 	{
-		return "Rank: " + this.rank + "\t Suits: " + this.suit;
+		return "Rank: " + this.getRank() + " Suit: " + this.getSuit() + " Value: " + this.pointValue;
 	}
 
 }
